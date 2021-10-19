@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "108803496720",
+    "project_id": "pocket-peja-b107e",
+    "storage_bucket": "pocket-peja-b107e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108803496720:android:aa605b2eb5c2fba1c62395",
+        "android_client_info": {
+          "package_name": "com.example.pocket_peja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108803496720-vlp0n31n2r43sls86b2rldssputcubo8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcW2TL8Byw5_f9W4oguhH8U0yQckzKhQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108803496720-vlp0n31n2r43sls86b2rldssputcubo8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
