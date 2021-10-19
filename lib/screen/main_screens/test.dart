@@ -10,7 +10,7 @@ class Test extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         leading: InkWell(
           child: const Icon(Icons.menu_book_rounded),
