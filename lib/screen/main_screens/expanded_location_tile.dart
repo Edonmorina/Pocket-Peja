@@ -106,11 +106,12 @@ class ExpandedTile extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(
                     vertical: 10.0, horizontal: 10.0),
-                child: Text(description, textAlign: TextAlign.left),
+                child: Flexible(
+                    child: Text(description, textAlign: TextAlign.left)),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 10.0),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
                 child: Container(
                   width: size.width,
                   height: 250,
@@ -124,33 +125,36 @@ class ExpandedTile extends StatelessWidget {
                           offset: const Offset(0, 5),
                         ),
                       ]),
-                  child: FlutterMap(
-                    options: MapOptions(
-                        screenSize: size,
-                        center: latLng.LatLng(destLat, destLong),
-                        zoom: 13.0),
-                    layers: [
-                      TileLayerOptions(
-                          urlTemplate:
-                              'https://api.mapbox.com/styles/v1/edonmorina/ckuy0otn93uqz18o6biad5wud/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZWRvbm1vcmluYSIsImEiOiJja3V4em9vbnQwNzh1MnFsZDNycnZ5YnFlIn0.XvwmBl5-tsRJDl6ZGO0udQ',
-                          additionalOptions: {
-                            'accessToken':
-                                'pk.eyJ1IjoiZWRvbm1vcmluYSIsImEiOiJja3V4em9vbnQwNzh1MnFsZDNycnZ5YnFlIn0.XvwmBl5-tsRJDl6ZGO0udQ',
-                            'id': 'mapbox.mapbox-streets-v8',
-                          }),
-                      MarkerLayerOptions(
-                        markers: [
-                          Marker(
-                              point: latLng.LatLng(originLat, originLong),
-                              builder: (context) =>
-                                  const Icon(Icons.pin_drop_outlined)),
-                          Marker(
-                              point: latLng.LatLng(destLat, destLong),
-                              builder: (context) =>
-                                  const Icon(Icons.pin_drop_rounded)),
-                        ],
-                      ),
-                    ],
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(30),
+                    child: FlutterMap(
+                      options: MapOptions(
+                          screenSize: size,
+                          center: latLng.LatLng(destLat, destLong),
+                          zoom: 13.0),
+                      layers: [
+                        TileLayerOptions(
+                            urlTemplate:
+                                'https://api.mapbox.com/styles/v1/edonmorina/ckuy0otn93uqz18o6biad5wud/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZWRvbm1vcmluYSIsImEiOiJja3V4em9vbnQwNzh1MnFsZDNycnZ5YnFlIn0.XvwmBl5-tsRJDl6ZGO0udQ',
+                            additionalOptions: {
+                              'accessToken':
+                                  'pk.eyJ1IjoiZWRvbm1vcmluYSIsImEiOiJja3V4em9vbnQwNzh1MnFsZDNycnZ5YnFlIn0.XvwmBl5-tsRJDl6ZGO0udQ',
+                              'id': 'mapbox.mapbox-streets-v8',
+                            }),
+                        MarkerLayerOptions(
+                          markers: [
+                            Marker(
+                                point: latLng.LatLng(originLat, originLong),
+                                builder: (context) =>
+                                    const Icon(Icons.pin_drop_outlined)),
+                            Marker(
+                                point: latLng.LatLng(destLat, destLong),
+                                builder: (context) =>
+                                    const Icon(Icons.pin_drop_rounded)),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

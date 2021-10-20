@@ -92,7 +92,7 @@ class _LocationTileState extends State<LocationTile>
                   MaterialPageRoute(
                     builder: (context) => ExpandedTile(
                       title: widget.locationName,
-                      description: "Just some description",
+                      description: widget.expandableTileDescription,
                       firstImgUrl: widget.firstImageUrl,
                       secondImgUrl: widget.secondImageUrl,
                       thirdImgUrl: widget.thirdImageUrl,
@@ -179,7 +179,7 @@ class _LocationTileState extends State<LocationTile>
                   MaterialPageRoute(
                     builder: (context) => ExpandedTile(
                       title: widget.locationName,
-                      description: "Just some description",
+                      description: widget.expandableTileDescription,
                       firstImgUrl: widget.firstImageUrl,
                       secondImgUrl: widget.secondImageUrl,
                       thirdImgUrl: widget.thirdImageUrl,
