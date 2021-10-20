@@ -24,10 +24,6 @@ class GetTravelTime {
   });
 
   Future<Album> fetchAlbum() async {
-    print("Origin lat: $originLat");
-    print("Origin lat: $originLong");
-    print("Key: $_key");
-
     try {
       var response = await client.get(
         Uri.parse(travelMode == TravelMode.walking

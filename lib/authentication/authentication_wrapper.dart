@@ -5,7 +5,7 @@ import 'package:pocket_peja/screen/menu/main_screen.dart';
 import 'package:pocket_peja/screen/auth_screens/sign_in.dart';
 
 class AuthenticationWrapper extends StatelessWidget {
-  // @override
+  @override
   Widget build(BuildContext context) {
     final _firebaseUser = context.watch<User?>();
 
