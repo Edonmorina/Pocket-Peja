@@ -5,7 +5,7 @@ import 'package:pocket_peja/controller/data_album.dart';
 // url =  https://api.distancematrix.ai/maps/api/distancematrix/json?origins=51.4822656,-0.1933769&destinations=51.4994794,-0.1269979&departure_time=now&key=HLqqA28mHcpMmNTzu3JJW5m0uDYaC
 enum TravelMode { walking, driving }
 
-const String _key = "dZBcNRRWEWQLAFMfd1f9VkQc1om7I";
+const String _key = "FqKmONlfvxfXFj4iyFsZndommUywC";
 
 class GetTravelTime {
   http.Client client = http.Client();
